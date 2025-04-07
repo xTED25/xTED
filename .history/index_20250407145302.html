@@ -148,124 +148,62 @@ Diffusion-Based Trajectory Editing">
           </div>
          </div>
 </section>
-
 <section class="section">
     <div class="container">
         <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
-                <h1 class="title is-2">Replaying Edited and Original Source Trajectory Pairs
-                </h1>
+                <h1 class="title is-2">Updated Dynamics Error Distribution for Edited Source Data</h1>
                 <div class="content has-text-justified">
-                    <!-- 按钮水平分布并添加颜色 -->
+                    <!-- 按钮居中 -->
                     <div class="button-group">
-                        <button onclick="showVideos('gravity', this)" class="btn active">Gravity</button>
-                        <button onclick="showVideos('friction', this)" class="btn">Friction</button>
-                        <button onclick="showVideos('thigh', this)" class="btn">Thigh</button>
+                        <button onclick="showVideos('gravity')">Gravity</button>
+                        <button onclick="showVideos('friction')">Friction</button>
+                        <button onclick="showVideos('thigh')">Thigh</button>
                     </div>
 
                     <!-- 视频容器 -->
-                    <div id="gravity" class="video-container" style="display: block;">
+                    <div id="gravity" class="video-container">
                         <h2>Gravity Videos</h2>
                         <div class="video-row">
                             <div class="video-item">
-                                <video controls autoplay muted onloadeddata="setPlaybackSpeed(this)">
+                                <video controls>
                                     <source src="/assets/web/new/HalfCheetah-v2_gravity.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
-                                <h3>HalfCheetah</h3>
+                                <h3>HalfCheetah-v2 Gravity</h3>
                             </div>
                             <div class="video-item">
-                                <video controls autoplay muted onloadeddata="setPlaybackSpeed(this)">
+                                <video controls>
                                     <source src="/assets/web/new/HalfCheetah-v2_gravity_edited.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
-                                <h3>HalfCheetah Edited</h3>
+                                <h3>HalfCheetah-v2 Gravity Edited</h3>
                             </div>
                             <div class="video-item">
-                                <video controls autoplay muted onloadeddata="setPlaybackSpeed(this)">
+                                <video controls>
                                     <source src="/assets/web/new/walker2d-v2_gravity.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
-                                <h3>Walker2D</h3>
+                                <h3>Walker2D-v2 Gravity</h3>
                             </div>
                             <div class="video-item">
-                                <video controls autoplay muted onloadeddata="setPlaybackSpeed(this)">
+                                <video controls>
                                     <source src="/assets/web/new/walker2d-v2_gravity_edited.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
-                                <h3>Walker2D Edited</h3>
+                                <h3>Walker2D-v2 Gravity Edited</h3>
                             </div>
                         </div>
                     </div>
 
-                    <div id="friction" class="video-container" style="display: none;">
+                    <div id="friction" class="video-container">
                         <h2>Friction Videos</h2>
                         <!-- 添加 Friction 视频链接 -->
-                        <div class="video-row">
-                            <div class="video-item">
-                                <video controls autoplay onloadeddata="setPlaybackSpeed(this)">
-                                    <source src="/assets/web/new/HalfCheetah-v2_friction.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <h3>HalfCheetah</h3>
-                            </div>
-                            <div class="video-item">
-                                <video controls autoplay onloadeddata="setPlaybackSpeed(this)">
-                                    <source src="/assets/web/new/HalfCheetah-v2_friction_edited.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <h3>HalfCheetah Edited</h3>
-                            </div>
-                            <div class="video-item">
-                                <video controls autoplay onloadeddata="setPlaybackSpeed(this)">
-                                    <source src="/assets/web/new/walker2d-v2_friction.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <h3>Walker2D</h3>
-                            </div>
-                            <div class="video-item">
-                                <video controls autoplay onloadeddata="setPlaybackSpeed(this)">
-                                    <source src="/assets/web/new/walker2d-v2_friction_edited.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <h3>Walker2D Edited</h3>
-                            </div>
-                        </div>
                     </div>
 
-                    <div id="thigh" class="video-container" style="display: none;">
+                    <div id="thigh" class="video-container">
                         <h2>Thigh Videos</h2>
                         <!-- 添加 Thigh 视频链接 -->
-                        <div class="video-row">
-                            <div class="video-item">
-                                <video controls autoplay onloadeddata="setPlaybackSpeed(this)">
-                                    <source src="/assets/web/new/HalfCheetah-v2_thigh_size.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <h3>HalfCheetah</h3>
-                            </div>
-                            <div class="video-item">
-                                <video controls autoplay onloadeddata="setPlaybackSpeed(this)">
-                                    <source src="/assets/web/new/HalfCheetah-v2_thigh_size_edited.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <h3>HalfCheetah Edited</h3>
-                            </div>
-                            <div class="video-item">
-                                <video controls autoplay onloadeddata="setPlaybackSpeed(this)">
-                                    <source src="/assets/web/new/walker2d-v2_thigh_size.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <h3>Walker2D</h3>
-                            </div>
-                            <div class="video-item">
-                                <video controls autoplay onloadeddata="setPlaybackSpeed(this)">
-                                    <source src="/assets/web/new/walker2d-v2_thigh_size_edited.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <h3>Walker2D Edited</h3>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -274,7 +212,7 @@ Diffusion-Based Trajectory Editing">
 </section>
 
 <script>
-    function showVideos(category, button) {
+    function showVideos(category) {
         // 隐藏所有视频容器
         var containers = document.querySelectorAll('.video-container');
         containers.forEach(function(container) {
@@ -284,54 +222,14 @@ Diffusion-Based Trajectory Editing">
         // 显示选定类别的视频容器
         var selectedContainer = document.getElementById(category);
         selectedContainer.style.display = 'block';
-
-        // 更新按钮状态
-        var buttons = document.querySelectorAll('.btn');
-        buttons.forEach(function(btn) {
-            btn.classList.remove('active'); // 移除所有按钮的active状态
-        });
-
-        // 为当前点击的按钮添加active类
-        button.classList.add('active');
-    }
-
-    // 设置视频的播放速度并自动播放
-    function setPlaybackSpeed(videoElement) {
-        videoElement.playbackRate = 0.25; // 设置播放速度为 0.5（即播放速度为正常速度的50%）
-        videoElement.play(); // 自动播放
     }
 </script>
 
 <style>
-    /* 按钮水平分布并添加颜色 */
+    /* 按钮居中 */
     .button-group {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
+        text-align: center;
         margin-bottom: 20px;
-    }
-
-    .btn {
-        background-color: #4CAF50; /* 默认按钮背景色 */
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1em;
-        cursor: pointer;
-        transition: all 0.3s ease; /* 过渡效果 */
-    }
-
-    .btn:hover {
-        background-color: #45a049; /* 悬停时的背景色 */
-    }
-
-    /* 激活按钮的变化 */
-    .btn.active {
-        background-color: #FF6347; /* 点击后按钮背景色，使用鲜艳的颜色 */
-        color: white; /* 激活按钮的文字颜色 */
-        border: 2px solid #FF4500; /* 激活按钮的边框颜色 */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影效果以增强视觉感 */
     }
 
     /* 视频并排显示 */
@@ -350,15 +248,11 @@ Diffusion-Based Trajectory Editing">
         align-items: center;
         justify-content: flex-end; /* 使视频和名称底部对齐 */
         text-align: center;
-        border: 2px solid #ddd; /* 为每个视频加上边框 */
-        border-radius: 8px; /* 边框圆角 */
-        padding: 10px;
     }
 
     .video-item video {
         width: 100%; /* 视频宽度填满容器 */
-        height: 200px; /* 设置固定高度，保持一致 */
-        object-fit: cover; /* 保持视频比例并填满容器 */
+        height: auto;
     }
 
     .video-item h3 {

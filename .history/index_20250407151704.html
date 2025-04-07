@@ -149,130 +149,6 @@ Diffusion-Based Trajectory Editing">
          </div>
 </section>
 
-<section class="section">
-    <div class="container">
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-                <h1 class="title is-2">Replaying Edited and Original Source Trajectory Pairs
-                </h1>
-                <div class="content has-text-justified">
-                    <!-- 按钮水平分布并添加颜色 -->
-                    <div class="button-group">
-                        <button onclick="showVideos('gravity', this)" class="btn active">Gravity</button>
-                        <button onclick="showVideos('friction', this)" class="btn">Friction</button>
-                        <button onclick="showVideos('thigh', this)" class="btn">Thigh</button>
-                    </div>
-
-                    <!-- 视频容器 -->
-                    <div id="gravity" class="video-container" style="display: block;">
-                        <h2>Gravity Videos</h2>
-                        <div class="video-row">
-                            <div class="video-item">
-                                <video controls autoplay muted onloadeddata="setPlaybackSpeed(this)">
-                                    <source src="/assets/web/new/HalfCheetah-v2_gravity.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <h3>HalfCheetah</h3>
-                            </div>
-                            <div class="video-item">
-                                <video controls autoplay muted onloadeddata="setPlaybackSpeed(this)">
-                                    <source src="/assets/web/new/HalfCheetah-v2_gravity_edited.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <h3>HalfCheetah Edited</h3>
-                            </div>
-                            <div class="video-item">
-                                <video controls autoplay muted onloadeddata="setPlaybackSpeed(this)">
-                                    <source src="/assets/web/new/walker2d-v2_gravity.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <h3>Walker2D</h3>
-                            </div>
-                            <div class="video-item">
-                                <video controls autoplay muted onloadeddata="setPlaybackSpeed(this)">
-                                    <source src="/assets/web/new/walker2d-v2_gravity_edited.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <h3>Walker2D Edited</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="friction" class="video-container" style="display: none;">
-                        <h2>Friction Videos</h2>
-                        <!-- 添加 Friction 视频链接 -->
-                        <div class="video-row">
-                            <div class="video-item">
-                                <video controls autoplay onloadeddata="setPlaybackSpeed(this)">
-                                    <source src="/assets/web/new/HalfCheetah-v2_friction.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <h3>HalfCheetah</h3>
-                            </div>
-                            <div class="video-item">
-                                <video controls autoplay onloadeddata="setPlaybackSpeed(this)">
-                                    <source src="/assets/web/new/HalfCheetah-v2_friction_edited.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <h3>HalfCheetah Edited</h3>
-                            </div>
-                            <div class="video-item">
-                                <video controls autoplay onloadeddata="setPlaybackSpeed(this)">
-                                    <source src="/assets/web/new/walker2d-v2_friction.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <h3>Walker2D</h3>
-                            </div>
-                            <div class="video-item">
-                                <video controls autoplay onloadeddata="setPlaybackSpeed(this)">
-                                    <source src="/assets/web/new/walker2d-v2_friction_edited.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <h3>Walker2D Edited</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="thigh" class="video-container" style="display: none;">
-                        <h2>Thigh Videos</h2>
-                        <!-- 添加 Thigh 视频链接 -->
-                        <div class="video-row">
-                            <div class="video-item">
-                                <video controls autoplay onloadeddata="setPlaybackSpeed(this)">
-                                    <source src="/assets/web/new/HalfCheetah-v2_thigh_size.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <h3>HalfCheetah</h3>
-                            </div>
-                            <div class="video-item">
-                                <video controls autoplay onloadeddata="setPlaybackSpeed(this)">
-                                    <source src="/assets/web/new/HalfCheetah-v2_thigh_size_edited.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <h3>HalfCheetah Edited</h3>
-                            </div>
-                            <div class="video-item">
-                                <video controls autoplay onloadeddata="setPlaybackSpeed(this)">
-                                    <source src="/assets/web/new/walker2d-v2_thigh_size.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <h3>Walker2D</h3>
-                            </div>
-                            <div class="video-item">
-                                <video controls autoplay onloadeddata="setPlaybackSpeed(this)">
-                                    <source src="/assets/web/new/walker2d-v2_thigh_size_edited.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <h3>Walker2D Edited</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <script>
     function showVideos(category, button) {
         // 隐藏所有视频容器
@@ -297,7 +173,7 @@ Diffusion-Based Trajectory Editing">
 
     // 设置视频的播放速度并自动播放
     function setPlaybackSpeed(videoElement) {
-        videoElement.playbackRate = 0.25; // 设置播放速度为 0.5（即播放速度为正常速度的50%）
+        videoElement.playbackRate = 0.5; // 设置播放速度为 0.5（即播放速度为正常速度的50%）
         videoElement.play(); // 自动播放
     }
 </script>
